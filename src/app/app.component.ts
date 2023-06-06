@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   getImages() {
     this.http
-      .get('https://jsonplaceholder.typicode.com/todos/')
+      .get('https://api.matthiasgutsch.com/products')
       .subscribe((posts) => {
         this.elements = posts;
       });

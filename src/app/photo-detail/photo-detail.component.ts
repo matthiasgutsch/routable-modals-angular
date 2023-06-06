@@ -22,7 +22,7 @@ export class PhotoDetailComponent {
 
   getDetail(id) {
     this.http
-      .get('https://jsonplaceholder.typicode.com/todos/' + id)
+      .get('https://api.matthiasgutsch.com/products/id/' + id)
       .subscribe((posts) => {
         this.element = posts;
       });

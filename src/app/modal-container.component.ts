@@ -26,7 +26,7 @@ export class ModalContainerComponent implements OnDestroy {
         centered: true,
       });
 
-      this.currentDialog.componentInstance.id = params.id;
+      this.currentDialog.componentInstance.id = params.slug;
 
       // Go back to home page after the modal is closed
       this.currentDialog.result.then(

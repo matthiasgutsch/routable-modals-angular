@@ -15,7 +15,7 @@ import { DialogModule } from 'primeng/dialog';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 
 const routes: Routes = [
-  { path: 'product/:id', component: ModalContainerComponent },
+  { path: 'product/:slug', component: ModalContainerComponent },
 ];
 
 @NgModule({
