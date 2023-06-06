@@ -9,8 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ModalContainerComponent } from './modal-container.component';
 import { PhotoDetailComponent } from './photo-detail/photo-detail.component';
-import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { DialogService } from 'primeng/dynamicdialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogModule } from 'primeng/dialog';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 
 const routes: Routes = [
   { path: 'product/:id', component: ModalContainerComponent },
@@ -22,10 +24,14 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    DialogModule,
+    DynamicDialogModule,
     RouterModule.forRoot(routes),
     NgbModule,
   ],
   entryComponents: [PhotoDetailComponent],
+  providers: [DialogService],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}
