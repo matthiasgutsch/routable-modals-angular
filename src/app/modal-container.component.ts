@@ -10,7 +10,7 @@ import { PhotoDetailComponent } from './photo-detail/photo-detail.component';
   selector: 'app-modal-container',
   template: '',
 })
-export class ModalContainerComponent {
+export class ModalContainerComponent implements OnDestroy {
   destroy = new Subject<any>();
   currentDialog = null;
 
@@ -38,5 +38,10 @@ export class ModalContainerComponent {
         }
       );
     });
+  }
+
+  ngOnDestroy() {
+    this.destroy.next(this.currentDialog);
+    console.log('chiuso');
   }
 }
