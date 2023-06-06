@@ -1,0 +1,15 @@
+<div class="container">
+  <ul class="list-unstyled">
+    <li class="media mb-4 mt-4" *ngFor="let element of elements">
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">
+          <a [routerLink]="'product/' + element.id">{{ element.title }}</a>
+        </h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+        ante sollicitudin.
+      </div>
+    </li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>
